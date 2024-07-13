@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root {
+            --primary-color: #333; /* 保持不变，深灰色 */
+            --background-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --header-height: 50px;
+            --font-size: 16px;
+            --padding: 50px;
+            --border-color: #ddd; /* 保持不变，浅灰色 */
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --footer-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+            --header-bg-color: #6c757d; /* 灰蓝色背景 */
+            --header-text-color: #ffffff; /* 白色文本 */
+            --navbar-bg-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --navbar-link-color: #333; /* 保持不变，深灰色 */
+            --navbar-link-hover-bg-color: #ddd; /* 保持不变，浅灰色 */
+            --main-bg-color: #ffffff; /* 保持不变，白色 */
+            --main-border-color: #ddd; /* 保持不变，浅灰色 */
+            --footer-bg-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --footer-text-color: #333; /* 保持不变，深灰色 */
+            --table-header-bg-color: #6c757d; /* 灰蓝色表头背景 */
+            --table-header-text-color: #ffffff; /* 白色表头文本 */
+            --table-row-even-bg-color: #f2f2f2; /* 浅灰色偶数行背景 */
+            --table-row-hover-bg-color: #e9ecef; /* 浅灰色悬停行背景 */
+            --table-link-color: #333; /* 保持不变，深灰色 */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: var(--font-size);
+            color: var(--primary-color);
+            background-color: var(--background-color);
+        }
+
+        .header {
+            padding: var(--header-height);
+            text-align: center;
+            background: url('../Img/Game.png') no-repeat center center;
+            background-size: cover;
+            color: var(--header-text-color);
+            height: var(--header-height);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: var(--navbar-bg-color);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            color: var(--navbar-link-color);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: var(--navbar-link-hover-bg-color);
+        }
+
+        .main {
+            padding: var(--padding);
+            background-color: var(--main-bg-color);
+            border: 1px solid var(--main-border-color);
+            box-shadow: var(--box-shadow);
+        }
+
+        .footer {
+            padding: var(--padding);
+            text-align: center;
+            background-color: var(--footer-bg-color);
+            border-top: 1px solid var(--border-color);
+            box-shadow: var(--footer-shadow);
+            color: var(--footer-text-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--table-header-bg-color);
+            color: var(--table-header-text-color);
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-even-bg-color);
+        }
+
+        tr:hover {
+            background-color: var(--table-row-hover-bg-color);
+        }
+
+        a {
+            color: var(--table-link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Brick Breaker</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">返回游戏主页</a></li>
+        </ul>
+    </nav>
+
+    <main class="main" id="download">
+        <h2>下载</h2>
+        <table>
+            <tr>
+                <th>版本</th>
+                <th>支持的系统</th>
+                <th>下载链接</th>
+            </tr>
+            <tr>
+                <td>0.1.0</td>
+                <td>Windows 10, 11</td>
+                <td><a href="https://pan.baidu.com/s/1HaLVI9vJGTGyOgiOw6jlwA?pwd=2fk7">BrickBreaker.zip</a></td>
+            </tr>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <p>版权所有 &copy; 2024 FriendlyXuKun</p>
+    </footer>   
+
+</body>
+</html>

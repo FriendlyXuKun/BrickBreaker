@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        :root {
+            --primary-color: #333; /* 保持不变，深灰色 */
+            --background-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --header-height: 300px;
+            --font-size: 16px;
+            --padding: 20px;
+            --border-color: #ddd; /* 保持不变，浅灰色 */
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            --footer-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+            --header-bg-color: #6c757d; /* 灰蓝色背景 */
+            --header-text-color: #ffffff; /* 白色文本 */
+            --navbar-bg-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --navbar-link-color: #333; /* 保持不变，深灰色 */
+            --navbar-link-hover-bg-color: #ddd; /* 保持不变，浅灰色 */
+            --main-bg-color: #ffffff; /* 保持不变，白色 */
+            --main-border-color: #ddd; /* 保持不变，浅灰色 */
+            --footer-bg-color: #f2f2f2; /* 保持不变，浅灰色 */
+            --footer-text-color: #333; /* 保持不变，深灰色 */
+        }
+
+        @keyframes shrinkHeader {
+            from {
+                height: var(--header-height);
+                padding: var(--header-height);
+            }
+            to {
+                height: 50px;
+                padding: 50px;
+            }
+        }
+
+        .shrink {
+            animation: shrinkHeader 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: var(--font-size);
+            color: var(--primary-color);
+            background-color: var(--background-color);
+        }
+
+        .header {
+            padding: var(--header-height);
+            text-align: center;
+            background: url('./Img/Game.png') no-repeat center center;
+            background-size: cover;
+            color: var(--header-text-color);
+            height: var(--header-height);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 40px;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: var(--navbar-bg-color);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar a {
+            display: block;
+            color: var(--navbar-link-color);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: var(--navbar-link-hover-bg-color);
+        }
+
+        .main {
+            padding: var(--padding);
+            background-color: var(--main-bg-color);
+            border: 1px solid var(--main-border-color);
+            box-shadow: var(--box-shadow);
+        }
+
+        .footer {
+            padding: var(--padding);
+            text-align: center;
+            background-color: var(--footer-bg-color);
+            border-top: 1px solid var(--border-color);
+            box-shadow: var(--footer-shadow);
+            color: var(--footer-text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Brick Breaker</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://friendlyxukun.github.io">返回主页</a></li>
+            <li><a href="#play">玩法简介</a></li>
+            <li><a href="#download">下载</a></li>
+        </ul>
+    </nav>
+
+    <main class="main" id="play">
+        <h2>玩法简介</h2>
+        <p>玩家开局拥有一个加农炮，需要面对不断下落、越来越强的方块，并通过升级加农炮来应对这些挑战。在这场战役中，玩家将不断升级，征服方块，最终获取足够的分数，取得胜利。</p>
+    </main>
+
+    <main class="main" id="download">
+        <h2>下载</h2>
+        <p>
+            最新版链接：
+            <a href="https://pan.baidu.com/s/1HaLVI9vJGTGyOgiOw6jlwA?pwd=2fk7">BrickBreaker.zip (For Windows)(v0.1.0)</a>
+        </p>
+        <p>
+            往期版本链接：
+            <a href="./Tools/download.html">Brick Breaker</a>
+        </p>
+    </main>
+
+    <footer class="footer">
+        <p>版权所有 &copy; 2024 FriendlyXuKun</p>
+    </footer>   
+
+    <script>
+        const header = document.querySelector('.header');
+        const scrollPosition = window.scrollY;
+
+        header.classList.add('shrink');
+    </script>
+
+</body>
+</html>
